@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Nadiatul - Personal Website</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0
+   ,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display
+   =swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Calistoga&family=Chivo:
+ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wgh
+t@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+<!----hero Section start-->
+
+<header>
+    <nav class="navbar section-content">
+        <a href="#" class="nav-logo">
+            <h2 class="logo">Naddy's Portfo<span>lio</span></h2>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="education2.html" class="nav-link">Education</a></li>
+            <li><a href="experience.html" class="nav-link">Work Experience</a></li>
+            <li><a href="family.html" class="nav-link">Family</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  <div class="hero">
+
+
+    <div class="content">
+      <h4>Hello, my name is</h4>
+      <h1>Nadiatul Hasanah</h1>
+      <h3>I'am a Science Information Student.</h3>
+      
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="card-1">
+   
+<!-- ====== ABOUT ME SECTION (new) ====== -->
+  <section class="about-me" id="about">
+  <div class="about-bg"></div> <!--  layer untuk heart animation -->
+  <div class="about-wrapper">
+
+    <!-- LEFT COLUMN: Slideshow -->
+    <div class="about-left">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="nadia1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="nadia2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="nadia3.jpg" style="width:100%">
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+    </div>
+
+    <!-- CENTER COLUMN: Biodata -->
+    <div class="about-center">
+      <img src="blinkies1.gif" alt="Cute Divider" class="about-divider">
+      <h2 class="about-title">Naddy's Biodata</h2>
+      <p>Name: Nurul Nadiatul Hasanah Binti Abdullah</p>
+      <p>Age: 20 y/o</p>
+      <p>Date of Birth: 1<sup>st</sup> June 2005</p>
+      <p>Place of Birth: Hospital Besar Lahad Datu, Sabah</p>
+    </div>
+
+    <!-- RIGHT COLUMN: Fun Facts -->
+    <div class="about-right">
+      <h3>Fun Facts About Me 💖</h3>
+      <ol>
+        <li>The youngest among my siblings</li>
+        <li>Favourite colour is pink</li>
+        <li>Addicted to milk</li>
+        <li>Enjoys watching sunrise and sunset</li>
+        <li>Love Chagee so much</li>
+        <li>Photography is my comfort zone</li>
+        <li>Enjoys spicy food</li>
+        <li>Love watching horror movie</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== Slideshow Script ====== -->
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change every 2s
+}
+</script>
+
+<!--  Floating Hearts for About Me Section (Behind Border) -->
+<script>
+function createAboutHeart() {
+  const aboutSection = document.querySelector('.about-me');
+  const heart = document.createElement('div');
+  heart.classList.add('about-heart');
+  heart.innerHTML = '❤';
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+  heart.style.animationDuration = 6 + Math.random() * 4 + 's';
+  aboutSection.querySelector('.about-bg').appendChild(heart);
+  setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createAboutHeart, 400);
+</script>
+
+
+
+
+
+<!------ fav section start ------->
+ <div class="fav">
+  <div class="title">
+    <h2>⁺ 𑁯 ˖  My Favourite ⑅  ೀ ˚</h2>
+  </div>
+
+  <div class="box">
+    <div class="card">
+      <i class="fa-solid fa-music"></i>
+      <h5>Songs</h5>
+      <div class="pra">
+        <p>Merindumu Lagi <br>- Knifnu</p>
+        <p style="text-align: center;">
+          <a class="button" href="song.mp3" target="_blank">Listen Here</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-burger"></i>
+      <h5>Food</h5>
+      <div class="pra">
+        <p>Char Kuey Teow Kerang Without Tauge</p>
+        <p style="text-align: center;">
+          <a class="button" href="https://www.rasa.my/cara-masak-char-kuey-teow-kerang-sedap-secara-homemade/" target="_blank">Recipe</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-building"></i>
+      <h5>Places</h5>
+      <div class="pra">
+        <p>Kundasang, <br>Sabah</p>
+        <p style="text-align: center;">
+          <a class="button" href="https://maps.app.goo.gl/PtBPbK4BfVNsYEF28" target="_blank">Location</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function createHeart() {
+  const favSection = document.querySelector('.fav');
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerHTML = '❤';
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+  heart.style.animationDuration = 6 + Math.random() * 4 + 's';
+  favSection.appendChild(heart);
+  setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 400);
+</script>
+
+
+
+
+
+
+<section class="know-me">
+  
+  <img src="blinkies2.gif" alt="Cute Divider" class="know-me-divider">
+
+  <div class="grid">
+    <div class="container">
+      <img src="fav.jpg" alt="Favourite" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h2>What I Love</h2>
+          <ol>
+            <li>Watching Sunrise & Sunset</li>
+            <li>Trying makeup</li>
+            <li>Photography and editing</li>
+            <li>Spicy food</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="hobby.jpg" alt="Hobbies" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h2>My Hobbies</h2>
+          <ol>
+            <li>Workout</li>
+            <li>Playing badminton</li>
+            <li>Watching horror movies</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="goal.jpg" alt="Goals" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h2>My Goals</h2>
+          <ol>
+            <li>Become confident in public speaking</li>
+            <li>Improve design & coding skills</li>
+            <li>Travel to new countries</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="inspired.jpg" alt="Inspirations" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h2>My Inspirations</h2>
+          <ol>
+            <li>My family’s support</li>
+            <li>Successful women</li>
+            <li>People who stay positive</li>
+            <li>Creative storytellers</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAVOURITES ZONE SECTION ====== -->
+<section class="fav-zone">
+  <div class="fav-wrapper">
+
+    <!-- LEFT COLUMN: Spotify -->
+    <div class="fav-left glass-box">
+      <h2>🎧 My Spotify Playlist</h2>
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/7cjtPB8uN8e5U7vQmoRU0P?utm_source=generator" 
+        width="100%" height="352" frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"></iframe>
+    </div>
+
+    <!-- CENTER COLUMN: Movies -->
+    <div class="fav-center glass-box">
+      <h2>🎬 My Comfort Movies</h2>
+      <ul class="movie-list">
+        <li>💅 Barbie (2023)</li>
+        <li>👑 The Princess Diaries (2001)</li>
+        <li>💋 Mean Girls (2004)</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT COLUMN: YouTube -->
+    <div class="fav-right glass-box">
+      <h2>🐾 My Favourite TikTok Videos</h2>
+      <div class="tt-videos">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@berrynostalgicbarbie/video/7539475725703744769" data-video-id="7539475725703744769" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@berrynostalgicbarbie" href="https://www.tiktok.com/@berrynostalgicbarbie?refer=embed">@berrynostalgicbarbie</a> FULL ^-^ || Barbie and the Secret Door (2014) [Trigger Warning] This movie is 1.33x the normal speed because the original movie is more than 80 minutes while TikTok&#39;s video length limit is 60 minutes max per video. But you can change your playback speed to 0.75x if you wanna watch it in normal speed, just click the 1x on the lower right side after you change to full screen. You can also watch the movie in normal speed but it&#39;s posted in 2 parts that are already saved in the &#34;Watch Barbie in Order&#34; playlist in my page. Have fun watching~ ^-^ <a title="barbiemovies" target="_blank" href="https://www.tiktok.com/tag/barbiemovies?refer=embed">#barbiemovies</a> <a title="barbie" target="_blank" href="https://www.tiktok.com/tag/barbie?refer=embed">#barbie</a> <a title="secretdoor" target="_blank" href="https://www.tiktok.com/tag/secretdoor?refer=embed">#secretdoor</a> <a title="barbieandthesecretdoor" target="_blank" href="https://www.tiktok.com/tag/barbieandthesecretdoor?refer=embed">#barbieandthesecretdoor</a> <a title="barbie2000s" target="_blank" href="https://www.tiktok.com/tag/barbie2000s?refer=embed">#barbie2000s</a> <a title="oldbarbie" target="_blank" href="https://www.tiktok.com/tag/oldbarbie?refer=embed">#oldbarbie</a> <a title="barbietiktok" target="_blank" href="https://www.tiktok.com/tag/barbietiktok?refer=embed">#barbietiktok</a> <a title="oldbarbiemovies" target="_blank" href="https://www.tiktok.com/tag/oldbarbiemovies?refer=embed">#oldbarbiemovies</a> <a title="nostalgia" target="_blank" href="https://www.tiktok.com/tag/nostalgia?refer=embed">#nostalgia</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ original sound  - Berry Chamomile" href="https://www.tiktok.com/music/original-sound-Berry-Chamomile-7539477013813185297?refer=embed">♬ original sound  - Berry Chamomile</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <h3>🌸 Nadiatul Hasanah</h3>
+      <p>Information Management Student</p>
+      <p>UiTM Segamat, Johor</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-middle">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-right">
+      <h4>Keep in Touch</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nadiatulhasanahh?igsh=MXNubDh5eW9qdXduaw%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@zzyndz?_r=1&_t=ZS-924ipZmwuN5" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://my.linkedin.com/in/nadiatul-hasanah-7809b1368" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:nadiatulhasanahh@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nurul Nadiatul Hasanah Binti Abdullah. All rights reserved.</p>
+  </div>
+</footer>
+
+<audio id="aboutMusic" src="songyad.mp3"></audio>
+
+<script>
+// Scroll ke About dengan offset kecil (elak header tutup)
+document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  const section = document.querySelector('#about');
+  const topPos = section.offsetTop - 80; // jarak offset dari header
+  window.scrollTo({ top: topPos, behavior: 'smooth' });
+
+  // main lagu
+  const audio = document.getElementById('aboutMusic');
+  audio.play();
+});
+</script>
+
+</body>
+</html>

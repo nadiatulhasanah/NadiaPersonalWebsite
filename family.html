@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Family</title>
+      <link rel="stylesheet" type="text/css" href="family.css">
+
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0
+      ,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display
+      =swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Calistoga&family=Chivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+<!-- ====== NAVBAR ====== -->
+<nav>
+    <div class="logo">Nadiatul Hasanah</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Work Experience</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<!--  FAMILY SECTION WITH HEADER  -->
+<section id="family" class="family-section">
+  <!-- HEADER -->
+  <div class="family-header fade-in-up">
+    <h2>My Beloved Family</h2>
+    <p>"Family is not just an important thing, it's everything."</p>
+  </div>
+
+  
+    <!--  VIDEO BACKGROUND -->
+<video autoplay muted loop id="bgVideo">
+  <source src="gif1.MP4" type="video/mp4">
+</video>
+
+  <div class="family-content">
+    <!-- FATHER -->
+    <div class="member-card fade-in-up" onclick="openModal('fatherModal')">
+      <img src="ayah.jpg" alt="Father">
+      <div class="member-info">
+        <h4>Abdullah bin Wajo</h4>
+        <p><strong>Father</strong> — 59 years old</p>
+      </div>
+    </div>
+
+    <!-- ANIMATION BETWEEN PARENTS -->
+<div class="love-animation">
+  <i class="fa-solid fa-heart"></i>
+</div>
+
+    <!-- MOTHER -->
+    <div class="member-card fade-in-up" onclick="openModal('motherModal')">
+      <img src="ibu.jpg" alt="Mother">
+      <div class="member-info">
+        <h4>Mardiah binti Batawari</h4>
+        <p><strong>Mother</strong> — 52 years old</p>
+      </div>
+    </div>
+
+    <div class="their-world">
+  <p>From Their Love, This Little World Began</p>
+</div>
+
+    <!-- SISTER 1 -->
+    <div class="member-card fade-in-up" onclick="openModal('kaklongModal')">
+      <img src="kaklong.jpg" alt="Nurul Mizatul Qamarina">
+      <div class="member-info">
+        <h4>Nurul Mizatul Qamarina</h4>
+        <p>29 — Married, have a son — Working</p>
+      </div>
+    </div>
+
+        <!-- SISTER 2 -->
+    <div class="member-card fade-in-up" onclick="openModal('kakngahModal')">
+      <img src="kakngah.jpg" alt="Nurul Auni Firzanah">
+      <div class="member-info">
+        <h4>Nurul Auni Firzanah</h4>
+        <p>28 — Married, have a daughter and a son — Working</p>
+      </div>
+    </div>
+
+        <!-- SISTER 3 -->
+    <div class="member-card fade-in-up" onclick="openModal('kakparaModal')">
+      <img src="kakpara.jpg" alt="Nurul Farah Syazrina">
+      <div class="member-info">
+        <h4>Nurul Farah Syazrina</h4>
+        <p>25 — Working</p>
+      </div>
+    </div>
+
+        <!--  BROTHER -->
+    <div class="member-card fade-in-up" onclick="openModal('kimiModal')">
+      <img src="kimi.jpg" alt="Muhammad Hakimi">
+      <div class="member-info">
+        <h4>Muhammad Hakimi</h4>
+        <p>23 — Currently studying at ADTEC Shah Alam</p>
+      </div>
+    </div>
+
+            <!--  ADIK -->
+    <div class="member-card fade-in-up" onclick="openModal('adekModal')">
+      <img src="adek.jpg" alt="Nurul Nadiatul Hasanah">
+      <div class="member-info">
+        <h4>Nurul Nadiatul Hasanah</h4>
+        <p>20 — Currently studying at UiTM Segamat</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  MODAL SCRIPT -->
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+// close if clicked outside modal box
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>
+
+<!--  MODALS (POPUP BOXES) -->
+<div id="fatherModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('fatherModal')">&times;</span>
+    <img src="ayah.jpg" alt="Father">
+    <h3>Abdullah bin Wajo</h3>
+    <p>My father, Abdullah bin Wajo, is the person I admire the most. He’s a hardworking and 
+      caring man who has always been there for our family through every situation. Even when he’s 
+      tired, he still finds time to make us laugh or give advice. His patience and strength inspire me every day, and I’m truly 
+      grateful to call him my dad.</p>
+  </div>
+</div>
+
+<div id="motherModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('motherModal')">&times;</span>
+    <img src="ibu.jpg" alt="Mother">
+    <h3>Mardiah binti Batawari</h3>
+    <p>My mother is the heart of our home. She’s caring, patient, and always puts family first. 
+    Her cooking brings everyone together, and her smile brightens our days.</p>
+  </div>
+</div>
+
+<div id="kaklongModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('kaklongModal')">&times;</span>
+    <img src="kaklong.jpg" alt="Nurul Mizatul Qamarina">
+    <h3>Nurul Mizatul Qamarina</h3>
+    <p>She is my eldest sister, Kaklong who is responsible, dedicated, and strong. 
+    She inspires me to work hard and be confident in every challenge.</p>
+  </div>
+</div>
+
+<div id="kakngahModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('kakngahModal')">&times;</span>
+    <img src="kakngah.jpg" alt="Nurul Auni Firzanah">
+    <h3>Nurul Auni Firzanah</h3>
+    <p>My second sister, Kakngah, has a cheerful and caring personality that always 
+      makes everyone around her feel comfortable. She’s strong, hardworking, and very dedicated to her 
+      job. Even though she has her own little family now, she never forgets about us. 
+      She often makes us laugh and reminds us to stay positive no matter what happens.</p>
+  </div>
+</div>
+
+<div id="kakparaModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('kakparaModal')">&times;</span>
+    <img src="kakpara.jpg" alt="Nurul Farah Syazrina">
+    <h3>Nurul Farah Syazrina</h3>
+    <p>My third sister, Kak Farah, is someone who’s full of joy and laughter. Her laugh is really 
+      loud sometimes but that’s what makes her so fun to be around. She gets easily entertained by the smallest 
+      things, and her happiness is contagious. Even though she’s playful and cheerful, she’s also caring and hardworking. 
+      The house always feels livelier whenever she’s around.</p>
+  </div>
+</div>
+
+<div id="kimiModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('kimiModal')">&times;</span>
+    <img src="kimi.jpg" alt="Muhammad Hakimi">
+    <h3>Muhammad Hakimi</h3>
+    <p>My brother, Abang Kimi, is the only boy among us siblings, and he definitely brings his own kind of energy to 
+      the family. He’s funny, sometimes a bit cheeky, but always caring in his own way. Even when he teases me, I know he 
+      means well. He’s currently studying and always tries his best in whatever he does.</p>
+  </div>
+</div>
+
+<div id="adekModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('adekModal')">&times;</span>
+    <img src="adek.jpg" alt="Nurul Nadiatul Hasanah">
+    <h3>Nurul Nadiatul Hasanah</h3>
+    <p>As for me, Adik, I’m the youngest in the family. Being the youngest means I’ve learned a 
+      lot from my parents and siblings with their advice, their love, and even their teasing have shaped who I am today. 
+      I’m still studying and finding my path, but I’m always inspired by my family’s strength and support. They are my motivation 
+      to keep improving and to make them proud one day.</p>
+  </div>
+</div>
+
+
+<!--  FAMILY PICTURE SLIDESHOW WITH POPUP  -->
+<div class="family-picture fade-in-up">
+  <h3>Family Picture</h3>
+
+  <div class="slider-container">
+    <div class="slider">
+      <img src="family1.jpg" alt="Family 1" onclick="openPicModal(this)">
+      <img src="family2.jpg" alt="Family 2" onclick="openPicModal(this)">
+      <img src="family3.jpg" alt="Family 3" onclick="openPicModal(this)">
+      <img src="family4.jpg" alt="Family 4" onclick="openPicModal(this)">
+      <img src="family5.jpg" alt="Family 5" onclick="openPicModal(this)">
+      <img src="family6.jpg" alt="Family 6" onclick="openPicModal(this)">
+
+      <!-- Duplicate for smooth infinite scroll -->
+      <img src="family1.jpg" alt="Family 1" onclick="openPicModal(this)">
+      <img src="family2.jpg" alt="Family 2" onclick="openPicModal(this)">
+      <img src="family3.jpg" alt="Family 3" onclick="openPicModal(this)">
+      <img src="family4.jpg" alt="Family 4" onclick="openPicModal(this)">
+      <img src="family5.jpg" alt="Family 5" onclick="openPicModal(this)">
+      <img src="family6.jpg" alt="Family 6" onclick="openPicModal(this)">
+    </div>
+  </div>
+</div>
+
+<!--  POPUP MODAL FOR BIG PICTURE -->
+<div id="picModal" class="pic-modal">
+  <span class="close" onclick="closePicModal()">&times;</span>
+  <img class="modal-img" id="modalImage">
+</div>
+
+<script>
+//  Open popup with clicked image
+function openPicModal(img) {
+  const modal = document.getElementById("picModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+//  Close popup
+function closePicModal() {
+  document.getElementById("picModal").style.display = "none";
+}
+
+//  Close when click outside image
+window.onclick = function(e) {
+  const modal = document.getElementById("picModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
+</script>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <h3>🌸 Nadiatul Hasanah</h3>
+      <p>Information Management Student</p>
+      <p>UiTM Segamat, Johor</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-middle">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-right">
+      <h4>Keep in Touch</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nadiatulhasanahh?igsh=MXNubDh5eW9qdXduaw%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@zzyndz?_r=1&_t=ZS-924ipZmwuN5" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://my.linkedin.com/in/nadiatul-hasanah-7809b1368" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:nadiatulhasanahh@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nurul Nadiatul Hasanah Binti Abdullah. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+</section>

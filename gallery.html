@@ -1,0 +1,343 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Calistoga&family=Chivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>My Gallery</title>
+<link rel="stylesheet" type="text/css" href="gallery.css">
+
+
+<body>
+    <!-- Background Video -->
+<video autoplay muted loop id="bgVideo">
+  <source src="gif2.MP4" type="video/mp4">
+</video>
+
+<!-- ====== NAVBAR ====== -->
+<nav>
+    <div class="logo">Nadiatul Hasanah</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Work Experience</a></li>
+        <li><a href="family.html">Family</a></li>
+    </ul>
+</nav>
+
+<!-- ====== HEADER ====== -->
+<header>Welcome to My Gallery</header>
+
+<!-- ====== FILTER BAR ====== -->
+<div class="filter-bar">
+    <button class="filter-button active" onclick="filterGallery('all')">All</button>
+
+    <div class="dropdown">
+        <button class="filter-button">Me ▾</button>
+        <div class="dropdown-content">
+            <button onclick="filterGallery('selfie')">Selfies</button>
+            <button onclick="filterGallery('ootd')">OOTD</button>
+        </div>
+    </div>
+
+    <button class="filter-button" onclick="filterGallery('family')">Family</button>
+    <button class="filter-button" onclick="filterGallery('friends')">Friends</button>
+    <button class="filter-button" onclick="filterGallery('view')">View</button>
+</div>
+
+<!-- ====== MUSIC SECTION ====== -->
+<div class="music-player">
+    <h3>🎧 Now Playing: <span>My Vibes</span></h3>
+    <audio id="bgMusic" controls>
+        <source src="tenxi.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<!-- ====== GALLERY ====== -->
+<div class="gallery-container">
+
+        <div class="gallery-item ootd">
+        <img src="naddy1.jpg" alt="OOTD 12">
+    </div>
+    <div class="gallery-item selfie">
+        <img src="selfie1.JPG" alt="Selfie 1">
+    </div>
+        <div class="gallery-item family">
+        <img src="family1.jpg" alt="Family 1">
+    </div>
+        <div class="gallery-item view">
+        <img src="view1.jpg" alt="View 1">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="ootd1.jpg" alt="OOTD 1">
+    </div>
+        <div class="gallery-item friends">
+        <img src="friend1.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="naddy2.jpg" alt="OOTD 12">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie4.JPG" alt="Selfie 4">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="ootd2.jpg" alt="OOTD 2">
+    </div>
+        <div class="gallery-item family">
+        <img src="family2.jpg" alt="Family 2">
+    </div>
+        <div class="gallery-item view">
+        <img src="view2.jpg" alt="View 2">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend2.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item selfie">
+        <img src="naddy4.JPG" alt="Selfie 4">
+    </div>
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie6.JPG" alt="Selfie 6">
+    </div>
+            <div class="gallery-item family">
+        <img src="family3.jpg" alt="Family 2">
+    </div>
+    <div class="gallery-item ootd">
+    <video controls muted>
+        <source src="ootdv.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+        <div class="gallery-item friends">
+        <img src="friend4.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view3.jpg" alt="View 1">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie14.JPG" alt="Selfie 8">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend14.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="ootd4.jpg" alt="OOTD 4">
+    </div>
+            <div class="gallery-item family">
+        <img src="family4.jpg" alt="Family 2">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend5.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view4.jpg" alt="View 1">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie9.JPG" alt="Selfie 9">
+    </div>
+                <div class="gallery-item friends">
+        <img src="friend15.HEIC" alt="Friends 1">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="ootd5.jpg" alt="OOTD 5">
+    </div>
+            <div class="gallery-item family">
+        <img src="family5.jpg" alt="Family 2">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend6.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view5.jpg" alt="View 1">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie10.JPEG" alt="Selfie 10">
+    </div>
+        <div class="gallery-item ootd">
+        <img src="ootd6.jpg" alt="OOTD 6">
+    </div>
+            <div class="gallery-item family">
+        <img src="family7.jpg" alt="Family 2">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend7.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view6.jpg" alt="View 1">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="selfie11.JPG" alt="Selfie 11">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend12.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item family">
+    <video controls muted>
+        <source src="family8.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <div class="gallery-item ootd">
+        <img src="ootd12.jpg" alt="OOTD 12">
+    </div>
+            <div class="gallery-item view">
+        <img src="view7.jpg" alt="View 1">
+    </div>
+        <div class="gallery-item friends">
+        <img src="friend8.jpg" alt="Friends 1">
+    </div>
+
+
+
+    <div class="gallery-item selfie">
+        <img src="adek.jpg" alt="Selfie 12">
+    </div>    
+    <div class="gallery-item ootd">
+        <img src="ootd10.jpg" alt="OOTD 10">
+    </div>
+<div class="gallery-item family">
+    <video controls muted>
+        <source src="family9.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+        <div class="gallery-item friends">
+        <img src="friend9.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item view">
+        <img src="view8.jpg" alt="View 1">
+    </div>
+
+
+
+    <div class="gallery-item ootd">
+        <img src="ootd13.jpg" alt="OOTD 13">
+    </div>
+        <div class="gallery-item friends">
+        <img src="friend10.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view9.jpg" alt="View 1">
+    </div>
+         <div class="gallery-item friends">
+        <img src="friend11.jpg" alt="Friends 1">
+    </div>
+            <div class="gallery-item view">
+        <img src="view10.jpg" alt="View 1">
+    </div>
+            <div class="gallery-item friends">
+        <img src="friend13.jpg" alt="Friends 1">
+    </div>
+        <div class="gallery-item selfie">
+        <img src="naddy5.JPG" alt="Selfie 4">
+    </div>
+</div>
+
+
+
+
+
+
+<!-- ====== POPUP ====== -->
+<div class="popup" id="popup">
+    <img src="" alt="Popup Image">
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <h3>🌸 Nadiatul Hasanah</h3>
+      <p>Information Management Student</p>
+      <p>UiTM Segamat, Johor</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-middle">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-right">
+      <h4>Keep in Touch</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nadiatulhasanahh?igsh=MXNubDh5eW9qdXduaw%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@zzyndz?_r=1&_t=ZS-924ipZmwuN5" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://my.linkedin.com/in/nadiatul-hasanah-7809b1368" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:nadiatulhasanahh@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nurul Nadiatul Hasanah Binti Abdullah. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+    // ====== FILTER GALLERY ======
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        const buttons = document.querySelectorAll('.filter-button');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.display = 'block';
+                setTimeout(() => item.style.opacity = '1', 100);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => item.style.display = 'none', 300);
+            }
+        });
+    }
+
+    // ====== POPUP ======
+    const popup = document.getElementById('popup');
+    const popupImg = popup.querySelector('img');
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            popupImg.src = img.src;
+            popup.classList.add('active');
+        });
+    });
+    popup.addEventListener('click', () => popup.classList.remove('active'));
+</script>
+
+
+</body>
+</html>

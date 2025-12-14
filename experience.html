@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Work Experience</title>
+      <link rel="stylesheet" type="text/css" href="exp.css">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0
+      ,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display
+      =swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Calistoga&family=Chivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- ====== NAVBAR ====== -->
+<nav>
+    <div class="logo">Nadiatul Hasanah</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+    <!--  VIDEO BACKGROUND -->
+<video autoplay muted loop id="bgVideo">
+  <source src="gif5.mp4" type="video/mp4">
+</video>
+
+<!--  EXPERIENCE SECTION WITH HEADER  -->
+<section id="family" class="family-section">
+  <!-- HEADER -->
+  <div class="family-header fade-in-up">
+    <h2>My Work Experience</h2>
+    <p>"Every task is a chance to learn something new."</p>
+  </div>
+ 
+
+<!-- Main Content -->
+<div class="content">
+
+
+<!-- Experience Section -->
+<section id="experience">
+    <table class="experience-table">
+    <thead>
+    <tr>
+        <th>Years</th>
+        <th>Position</th>
+        <th>Institution/Company</th>
+        <th>Achievements</th>
+    </tr>
+    </thead>
+
+    <tbody>
+<tr>
+  <td>28 July - 19 Sept 2025</td>
+  <td>Internship Student</td>
+  <td>
+    <a href="https://maps.app.goo.gl/UqtCxFZvoUjSFMAH6" 
+       target="_blank" 
+       class="map-link">
+       Pejabat Pendidikan Daerah Kulai, Johor
+    </a>
+  </td>
+  <td>
+    <ul>
+      <li>Enhanced Administrative & Information Management Skills</li>
+      <li>Created Professional ICT & Multimedia Materials</li>
+      <li>Supported Major District-Level Events</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>Feb 2024 - March 2024</td>
+  <td>Inventory Staff (Part Time)</td>
+  <td>
+    <a href="https://maps.app.goo.gl/H7rSaPga571xwCNG7" 
+       target="_blank" 
+       class="map-link">
+       Warehouse Associate | Shopee
+    </a>
+  </td>
+  <td>
+    <ul>
+      <li>Managed inventory and ensured accurate order fulfillment by adhering to daily operational guidelines.</li>
+      <li>Assisted in the implementation of process improvements that increased warehouse efficiency and reduced errors.</li>
+      <li>Demonstrated strong teamwork and communication skills to collaborate with cross-functional teams, including logistics and customer service.</li>
+    </ul>
+  </td>
+</tr>
+    </tbody>
+    </table>
+    </section>
+
+<div class="scroll-container">
+  <img src="intern1.jpg"  alt="intern 1" width="250" height="340">
+  <img src="intern8.jpg"  alt="intern 1" width="250" height="340">
+  <img src="intern2.jpg"  alt="intern 2" width="250" height="340">
+  <img src="intern3.jpg"  alt="intern 3" width="250" height="340">
+  <img src="intern7.jpg" width="250" height="340">
+  <video controls autoplay controls loop controls muted width="250" height="340">
+    <source src="intern9.mp4" type="video/mp4" alt="intern 5" >
+  </video>
+  <img src= "intern6.jpg" alt="intern 6" width="250" height="340">
+  <img src= "intern5.jpg" alt="intern 7" width="250" height="340">
+  <img src= "intern4.jpg" alt="intern 7" width="250" height="340">
+</div>
+
+
+    <script>
+window.addEventListener('scroll', function() {
+    const skills = document.querySelectorAll('.skill-level');
+    const trigger = window.innerHeight / 1.2;
+
+    skills.forEach(skill => {
+        const skillTop = skill.getBoundingClientRect().top;
+        if (skillTop < trigger) {
+            if (skill.classList.contains('html')) skill.style.width = '90%';
+            if (skill.classList.contains('css')) skill.style.width = '85%';
+            if (skill.classList.contains('js')) skill.style.width = '70%';
+            if (skill.classList.contains('design')) skill.style.width = '88%';
+            if (skill.classList.contains('communication')) skill.style.width = '95%';
+        }
+    });
+});
+</script>
+
+    <!-- Skills Section -->
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <p class="skills-subtitle">A blend of creativity, logic, and teamwork 🌸</p>
+
+    <div class="skills-container">
+        <div class="skill">
+            <p>HTML</p>
+            <div class="skill-bar"><div class="skill-level html">90%</div></div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="skill-bar"><div class="skill-level css">85%</div></div>
+        </div>
+
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="skill-bar"><div class="skill-level js">70%</div></div>
+        </div>
+
+        <div class="skill">
+            <p>Canva & Multimedia Design</p>
+            <div class="skill-bar"><div class="skill-level design">88%</div></div>
+        </div>
+
+        <div class="skill">
+            <p>Communication & Teamwork</p>
+            <div class="skill-bar"><div class="skill-level communication">95%</div></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <h3>🌸 Nadiatul Hasanah</h3>
+      <p>Information Management Student</p>
+      <p>UiTM Segamat, Johor</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-middle">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education2.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-right">
+      <h4>Keep in Touch</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nadiatulhasanahh?igsh=MXNubDh5eW9qdXduaw%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@zzyndz?_r=1&_t=ZS-924ipZmwuN5" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://my.linkedin.com/in/nadiatul-hasanah-7809b1368" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:nadiatulhasanahh@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nurul Nadiatul Hasanah Binti Abdullah. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

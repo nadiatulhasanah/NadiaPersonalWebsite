@@ -1,0 +1,465 @@
+/* ====== NAVBAR ====== */
+    nav {
+        background: rgb(248, 184, 214);
+        font-family: 'Poppins', 'Sans-serif'; 
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 2px solid rgba(106, 90, 205, 0.2);
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #b1164a; /* nadiatul hasanah */
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background: #b30648;
+        color: white;
+        box-shadow: 0 3px 10px rgba(106,90,205,0.3);
+    }
+
+    #bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* send behind everything */
+    
+}
+
+   /* Header */ 
+.edu-header {
+  background: transparent;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  margin: 40px 0 10px;
+  color: #3c003c; /* boleh tukar kalau nak lebih gelap/terang */
+}
+
+#date-time {
+  text-align: center;
+  font-size: 18px;
+  color: #b1164a;
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  display: block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#date-time .time {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff0055;
+  margin-top: 5px;
+  text-shadow: 0 0 8px rgba(255, 0, 85, 0.3);
+}
+
+.timeline-title {
+  background: transparent;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #3c003c;
+}
+
+/* --- Layout timeline --- */
+.timeline-container {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  background: transparent;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* track yang pegang semua kad */
+.timeline-track {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 80px; /* bagi ruang kiri dan kanan seimbang */
+  margin: 0 auto;  /* centerkan keseluruhan track */
+  transition: transform 0.5s ease;
+}
+
+/* ===== Individual Card ===== */
+.timeline-card {
+  display: inline-block;
+  background: rgba(255, 250, 242, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 270px;
+  height: 330px;
+  text-align: center;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  padding: 20px 15px;          /* tambah ruang dalam kad */
+  box-sizing: border-box;      /* pastikan padding kira dalam lebar */
+}
+
+.timeline-card:hover {
+  transform: scale(1.03);
+}
+
+/* ===== YEAR BOX ===== */
+.year-box {
+  position: absolute;
+  top: -10px;                 /* turun sikit supaya tak dekat sangat dengan gambar */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+/* ===== IMAGE SLIDER ===== */
+.image-slider {
+  position: relative;
+  width: 70%;                 /* kecil sikit supaya ada ruang kiri kanan */
+  height: 150px;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 30px auto 15px;     /* atas 30px supaya tak kena year box */
+  background: #fff;           /* background putih lembut belakang gambar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Panah kiri kanan */
+.image-slider .prev,
+.image-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.image-slider .prev:hover,
+.image-slider .next:hover {
+  background-color: #ff9eed;
+  color: white;
+}
+
+.image-slider .prev { left: 8px; }
+.image-slider .next { right: 8px; }
+
+/* ===== TEXT ===== */
+.timeline-card p {
+  margin: 6px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.timeline-card .location a {
+  text-decoration: none;
+  color: #b1164a;
+  font-weight: 600;
+}
+
+.timeline-card .location a:hover {
+  color: #ff5a5f;
+}
+
+
+
+
+/* ===== Hide scrollbar for clean look ===== */
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ====== Background image dari header ke bawah ====== */
+.edu-bg {
+  background-image: url('choco1.JPG'); /* tukar nama gambar kau */
+  background-size: cover;        /* penuh satu area */
+  background-position: center;   /* tengah gambar */
+  background-repeat: repeat;  /* tak ulang gambar */
+  padding-bottom: 60px;          /* ruang bawah */
+}
+
+/* Auto scroll text */
+.auto-scroll-text {
+  margin-top: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #ff5a5f;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: moveText 15s linear infinite;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Scrollbar hidden for clean look */
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== My Journey Highlights ===== */
+.journey-highlights {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.highlight-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #3c003c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* === Card Styling === */
+.highlight-card {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 250, 242, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.highlight-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Animation */
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 120, 170, 0.4);
+  background: rgba(255, 250, 250, 1);
+}
+
+.highlight-card video {
+  width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.highlight-card:hover video {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.highlight-text {
+  width: 60%;
+  transition: all 0.4s ease;
+}
+
+.highlight-text h3 {
+  margin: 0 0 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  color: #b1164a;
+}
+
+.highlight-text p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Hover text slide effect */
+.highlight-card:hover .highlight-text {
+  transform: translateX(5px);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .highlight-card {
+    flex-direction: column;
+  }
+
+  .highlight-card video,
+  .highlight-text {
+    width: 100%;
+  }
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background: linear-gradient(to right, #ffd6f1, #ffe6f8);
+  padding: 25px 60px 15px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Left Section */
+.footer-left h3 {
+  font-size: 20px;
+  color: #f9004d;
+  margin-bottom: 5px;
+}
+
+.footer-left p {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0;
+}
+
+/* Middle Section */
+.footer-middle h4 {
+  font-size: 15px;
+  color: #f9004d;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-middle ul li {
+  margin-bottom: 6px;
+}
+
+.footer-middle ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-middle ul li a:hover {
+  color: #f9004d;
+}
+
+/* Right Section */
+.footer-right h4 {
+  font-size: 15px;
+  color: #f9004d;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.footer-right .social-links a {
+  color: #f9004d;
+  font-size: 18px;
+  margin: 0 6px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-right .social-links a:hover {
+  color: #ff66a3;
+  transform: scale(1.2);
+}
+
+/* Bottom Line */
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 12px;
+  border-top: 1px solid #f5a3c7;
+  padding-top: 8px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-middle ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
